@@ -1,0 +1,29 @@
+{
+    "skipback": {
+        "message": "　"
+    },
+    "disable": {
+        "message": "　"
+    },
+    "disabled": {
+        "message": "Disabled"
+    },
+    "enable": {
+        "message": "　"
+    },
+    "playbackrate": {
+        "message": "PlaybackRate"
+    },
+    "help": {
+        "message": "Help"
+    },
+    "sec": {
+        "message": "Sec"
+    },
+    "enablehtml5": {
+        "message": "Enable HTML5 player"
+    },
+    "nosupport": {
+        "message": "This Video is not supported."
+    }
+}

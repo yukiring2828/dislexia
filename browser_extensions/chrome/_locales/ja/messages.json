@@ -1,0 +1,29 @@
+{
+    "skipback": {
+        "message": "　"
+    },
+    "disable": {
+        "message": "　"
+    },
+    "disabled": {
+        "message": "無効中"
+    },
+    "enable": {
+        "message": "　"
+    },
+    "playbackrate": {
+        "message": "再生速度"
+    },
+    "help": {
+        "message": "ヘルプ"
+    },
+    "sec": {
+        "message": "秒"
+    },
+    "enablehtml5": {
+        "message": "HTML5プレイヤーを有効にしてください"
+    },
+    "nosupport": {
+        "message": "この動画には対応していません"
+    }
+}
