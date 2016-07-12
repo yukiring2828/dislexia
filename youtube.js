@@ -383,8 +383,8 @@
           			}
           		},
           		type: "POST", //xml, json, jsonp, text, script, htmlから該当のものを記入。省略した場合はxml,json,script,htmlから自動判別。空白区切りで複数指定可(その中から自動判別)。
-          		//user: "3kprkqhsdn3717nr", //認証リクエストがある場合のユーザー名。認証がなければ省略可。
-              //user: "futattio28",//認証リクエストがある場合のパスワード。認証がなければ省略可。
+          		user: "3kprkqhsdn3717nr", //認証リクエストがある場合のユーザー名。認証がなければ省略可。
+              //user: "",//認証リクエストがある場合のパスワード。認証がなければ省略可。
               Origin: "test.wav"
           	})
             /*
