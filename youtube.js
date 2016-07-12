@@ -92,9 +92,9 @@
     //
 
     function setControl(){
-      document.getElementById('offset').value  = offset;
-      document.getElementById('offset_value').value  = offset;
-      document.getElementById('vsset').value  = offset;//追加
+      //document.getElementById('offset').value  = offset;
+      //document.getElementById('offset_value').value  = offset;
+      document.getElementById('vs_set').value  = offset;//追加
       document.getElementById('vs_value').value  = offset;//追加
       document.getElementById('ss').value  = LOWRATE;
       document.getElementById('ss_value').value  = LOWRATE;
