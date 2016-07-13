@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="icons/icon_016.png" type="image/png">
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+
+  $.ajax({
+    url: "https://api.voicetext.jp/v1/tts",
+    cache: false, //falseにすると、ajaxの内容をキャッシュしないようにする。defaultはtrue。省略可。
+    data: { //サーバーにGETで渡す情報。渡す必要がなければ省略可。
+      "text" : "おはようございます",
+      "speaker" : "show"
+    },
+    beforeSend: function(xhr) {
+      //var credentials = $.base64.encode("username:3kprkqhsdn3717nr:");
+      xhr.setRequestHeader("Authorization", "Basic " + "3kprkqhsdn3717nr:");
+    },
+    statusCode: { //HTTPコードが応答された場合に実行する内容を指定。必要なければ省略可。
+      404: function(){
+        alert("Page not found.");
+      }
+    },
+    type: "POST", //xml, json, jsonp, text, script, htmlから該当のものを記入。省略した場合はxml,json,script,htmlから自動判別。空白区切りで複数指定可(その中から自動判別)。
+    user: "3kprkqhsdn3717nr", //認証リクエストがある場合のユーザー名。認証がなければ省略可。
+    //user: "",//認証リクエストがある場合のパスワード。認証がなければ省略可。
+    Origin: "test.wav"
+  })
+
+</script>
+</body>
+</html>
