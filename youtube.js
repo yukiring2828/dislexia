@@ -378,7 +378,7 @@
           		},
               beforeSend: function(xhr) {
                 //var credentials = $.base64.encode("username:3kprkqhsdn3717nr:");
-                xhr.setRequestHeader("Authorization", "Basic " + "username:3kprkqhsdn3717nr");
+                xhr.setRequestHeader("Authorization", "Basic " + "3kprkqhsdn3717nr:");
               },
           		statusCode: { //HTTPコードが応答された場合に実行する内容を指定。必要なければ省略可。
           			404: function(){
