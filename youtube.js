@@ -342,7 +342,7 @@
 
 
     	//主なオプション
-    	$.ajax({
+    /*	$.ajax({
     		url: "https://api.voicetext.jp/v1/tts",
     		cache: false, //falseにすると、ajaxの内容をキャッシュしないようにする。defaultはtrue。省略可。
     		data: { //サーバーにGETで渡す情報。渡す必要がなければ省略可。
@@ -364,7 +364,7 @@
     		console.log(errorThrown.message); //例外情報を表示
     	}).always(function(data, textStatus, returnedObject){ //以前のcompleteに相当。ajaxの通信に成功した場合はdone()と同じ、失敗した場合はfail()と同じ引数を返します。
     		alert(textStatus);
-    	});
+    	});*/
     });
 //aa
     function setRate2(st){
