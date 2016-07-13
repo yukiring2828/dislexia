@@ -10,7 +10,8 @@
     var LOWRATE = 1;
     var INTERVAL = 50;
     var player;
-    var offset=0;
+    var offset=0;//追加分
+    var vsset=0;
     var fff=0;//最初
     var eee=0;//最後
     var autoplay=0;
@@ -365,7 +366,7 @@
     		alert(textStatus);
     	});
     });
-
+//aa
     function setRate2(st){
           if (st>count){
             $.ajax({

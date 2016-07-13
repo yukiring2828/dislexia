@@ -30,7 +30,7 @@ function parseSrt(srt) {
   subList = [];
 
   var i=0;
-  var lines = srt.split('\n');
+  var lines = srt.split('\n');//字幕データ
   do{
     if (lines[i] == '')break;
     //lines[i] is a number
