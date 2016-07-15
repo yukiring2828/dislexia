@@ -316,12 +316,12 @@
         }
       }
     }
-    $(function(){
+    //$(function(){
     	/*----------------
     	Ajax全般
     	----------------*/
     	//最小限
-    	$.ajax({
+    /*	$.ajax({
     		url: "module.html"
     	}).done(function(data){ //ajaxの通信に成功した場合
     		alert("success!");
@@ -365,10 +365,11 @@
     	}).always(function(data, textStatus, returnedObject){ //以前のcompleteに相当。ajaxの通信に成功した場合はdone()と同じ、失敗した場合はfail()と同じ引数を返します。
     		alert(textStatus);
     	});
-    });
+    });*/
 //aa
+
     function setRate2(st){
-          if (st>count){
+        /*  if (st>count){
             $.ajax({
           		url: "https://api.voicetext.jp/v1/tts",
           		cache: false, //falseにすると、ajaxの内容をキャッシュしないようにする。defaultはtrue。省略可。
@@ -390,7 +391,7 @@
               //user: "",//認証リクエストがある場合のパスワード。認証がなければ省略可。
               Origin: "test.wav"
           	})
-            /*
+
             .done(function(data, textStatus, jqXHR){
           		alert("success!");
           		$(".example").html(data);
@@ -402,7 +403,7 @@
 
           	});
             */
-            /*console.log(st+" "+subList[st]);
+            console.log(st+" "+subList[st]);
             console.log(subList[st].length);
             count++;
             var u = new SpeechSynthesisUtterance();
@@ -435,7 +436,7 @@
             console.log("aaaa "+flag);
             if(flag==0)player.pauseVideo();//??????????????一時停止
           //  else player.playVideo();/////???????????再開
-*/
+
         }
       }
 
