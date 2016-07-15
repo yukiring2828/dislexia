@@ -423,9 +423,9 @@
           player.playVideo();}//
             u.onend = function(event)
             {
-             //alert('Finished in ' + event.elapsedTime + ' seconds.');*/
+             //alert('Finished in ' + event.elapsedTime + ' seconds.');
              //console.timeEnd("a");
-             /*endTime = new Date();
+             endTime = new Date();
              console.log((endTime - startTime)/1000 + "s");
              flag=1;
              console.log(flag);
