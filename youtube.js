@@ -8,6 +8,8 @@
     var dulation;
     var HIGHRATE = 2;
     var LOWRATE = 1;
+    var VSRATE =1.0;
+    var VPRATE =1;
     var INTERVAL = 50;
     var player;
     var offset=0;//追加分
@@ -52,13 +54,19 @@
         first = true;
         setPerformance();
       })
-      document.getElementById('offset').addEventListener('change', function () {
+      /*document.getElementById('offset').addEventListener('change', function () {
         var newOff = document.getElementById('offset').value;
         document.getElementById('offset_value').value  = newOff;
         offset = newOff;
         first = true;
         setPerformance();
-      })
+      })*/
+      //offset関係
+
+
+      //追加
+
+
 
       player = new YT.Player('player', {
         height: '390',
@@ -73,6 +81,7 @@
     }
 
     //追加
+
 
     function onRadioButtonChange() {
       check1 = document.form.keep1.checked;
@@ -93,10 +102,26 @@
     //
 
     function setControl(){
-      document.getElementById('offset').value  = offset;
-      document.getElementById('offset_value').value  = offset;
-      //document.getElementById('vs_set').value  = offset;//追加
-      //document.getElementById('vs_value').value  = offset;//追加
+      document.getElementById('vs').addEventListener('change', function () {
+        var newVs = document.getElementById('vs').value;
+        document.getElementById('vs_value').value  = newVs;
+        VSRATE = newVs;
+        first = true;
+        setPerformance();
+      })//追加分
+
+      document.getElementById('vp').addEventListener('change', function () {
+        var newVp = document.getElementById('vp').value;
+        document.getElementById('vp_value').value  = newVp;
+        VPRATE = newVp;
+        first = true;
+        setPerformance();
+      })//追加分
+
+      //document.getElementById('offset').value  = offset;//offset
+      //document.getElementById('offset_value').value  = offset;//offset
+      document.getElementById('vs').value  = VSRATE;//追加
+      document.getElementById('vs_value').value  = VSRATE;//追加
       document.getElementById('ss').value  = LOWRATE;
       document.getElementById('ss_value').value  = LOWRATE;
       document.getElementById('ms').value  = HIGHRATE;
@@ -369,8 +394,8 @@
 //aa
 
     function setRate2(st){
-        /*  if (st>count){
-            $.ajax({
+        if (st>count){
+            /*$.ajax({
           		url: "https://api.voicetext.jp/v1/tts",
           		cache: false, //falseにすると、ajaxの内容をキャッシュしないようにする。defaultはtrue。省略可。
           		data: { //サーバーにGETで渡す情報。渡す必要がなければ省略可。
@@ -407,11 +432,16 @@
             console.log(subList[st].length);
             count++;
             var u = new SpeechSynthesisUtterance();
+            console.log(u.rate);
             u.text = subList[st];
             u.lang = 'ja-JP';
             //u.lang = 'en-US';
-            u.rate=LOWRATE+subList[st].length*0.008;
-            console.log(LOWRATE+subList[st].length*0.008);
+            var syousuu = subList[st].length*0.008 * 100;
+            syousuu = Math.round(syousuu);
+            syousuu=syousuu/10;
+            u.rate=parseFloat(VSRATE+syousuu);
+            u.pitch=VPRATE;
+            console.log("VSRATE "+VSRATE);
             //u.rate = LOWRATE+0.3;
             var nowVolum = player.getVolume();
             player.setVolume(nowVolum);

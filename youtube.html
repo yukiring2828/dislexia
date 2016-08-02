@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <link rel="shortcut icon" href="icons/icon_016.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <title>読み上げ</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
   </head>
   <body>
     <script>
@@ -35,10 +37,13 @@
         <input id="ss" type="range" min="0.5" max="2.0" step="0.5" value="1.0">
         x<output id="ss_value">1.0</output> for speech
         <br>
-        <!--<input id="vs_value" type="range" min="0.5" max="2.0" step="0.5" value="1.0">
-        x<output id="vs_value">1.0</output> for voice speech-->
-         <input id="offset" type="range" min="0" max="2000" step="50" value="1000">
-        <output id="offset_value">0</output> ms for offset before speech
+        <input id="vs" type="range" min="0.5" max="1.8" step="0.1" value="1.0">
+        x<output id="vs_value">0.8</output> 　字幕のスピード調節バー
+        <br>
+        <input id="vp" type="range" min="0.1" max="2.0" step="0.1" value="1.0">
+        x<output id="vp_value">1.0</output> 字幕の声の高さ低さの調節
+        <!--<input id="offset" type="range" min="0" max="2000" step="50" value="1000">
+        <output id="offset_value">0</output> ms for offset before speech-->
         <!--　今たぶん動画の音声をひっぱってるので音声合成の声は独自に値を設定する -->
         <br>
       </div>
