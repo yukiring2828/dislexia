@@ -18,10 +18,15 @@
     var eee=0;//最後
     var autoplay=0;
     var count=-1;//追加した
+    var syousuu =0;
     var flag =0;
     function onYouTubeIframeAPIReady() {
       //var vid = 'd4Mu3CxaP-4';
-      var vid = 'oyOJotQUfVs';//'wJddRdcr3BE';//'7Qgif5_6_Gg';
+      //var vid = 'oyOJotQUfVs';//'wJddRdcr3BE';//'7Qgif5_6_Gg';
+
+    //  var vid = '3OtGlm15_iA';//動画①
+      //var vid = 'ZikTU_VnFs4';//動画②
+      var vid = 'whO8OkNZV9E';
       var para = getUrlVars();
       if (para["v"])  vid = para["v"];
       if (para["autoplay"]) autoplay= para["autoplay"];
@@ -62,7 +67,21 @@
         setPerformance();
       })*/
       //offset関係
+      document.getElementById('vs').addEventListener('change', function () {
+        var newVs = document.getElementById('vs').value;
+        document.getElementById('vs_value').value  = newVs;
+        VSRATE = newVs;
+        first = true;
+        setPerformance();
+      })//追加分
 
+      document.getElementById('vp').addEventListener('change', function () {
+        var newVp = document.getElementById('vp').value;
+        document.getElementById('vp_value').value  = newVp;
+        VPRATE = newVp;
+        first = true;
+        setPerformance();
+      })//追加分 途中にバーを動かしたら反映される。
 
       //追加
 
@@ -102,21 +121,7 @@
     //
 
     function setControl(){
-      document.getElementById('vs').addEventListener('change', function () {
-        var newVs = document.getElementById('vs').value;
-        document.getElementById('vs_value').value  = newVs;
-        VSRATE = newVs;
-        first = true;
-        setPerformance();
-      })//追加分
 
-      document.getElementById('vp').addEventListener('change', function () {
-        var newVp = document.getElementById('vp').value;
-        document.getElementById('vp_value').value  = newVp;
-        VPRATE = newVp;
-        first = true;
-        setPerformance();
-      })//追加分
 
       //document.getElementById('offset').value  = offset;//offset
       //document.getElementById('offset_value').value  = offset;//offset
@@ -429,19 +434,20 @@
           	});
             */
             console.log(st+" "+subList[st]);
-            console.log(subList[st].length);
+            console.log("length"+subList[st].length);
             count++;
             var u = new SpeechSynthesisUtterance();
             console.log(u.rate);
             u.text = subList[st];
             u.lang = 'ja-JP';
             //u.lang = 'en-US';
-            var syousuu = subList[st].length*0.008 * 100;
-            syousuu = Math.round(syousuu);
-            syousuu=syousuu/10;
             u.rate=parseFloat(VSRATE+syousuu);
+            syousuu = subList[st].length*0.008 * 100;
+            syousuu = Math.round(syousuu);
+            syousuu=syousuu/100;
             u.pitch=VPRATE;
             console.log("VSRATE "+VSRATE);
+            console.log("u"+syousuu);
             //u.rate = LOWRATE+0.3;
             var nowVolum = player.getVolume();
             player.setVolume(nowVolum);
