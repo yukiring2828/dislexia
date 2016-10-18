@@ -23,29 +23,29 @@
     function onYouTubeIframeAPIReady() {
       //var vid = 'd4Mu3CxaP-4';
       //var vid = 'oyOJotQUfVs';//'wJddRdcr3BE';//'7Qgif5_6_Gg';
-
-    //  var vid = '3OtGlm15_iA';//動画①
+var vid = 'whO8OkNZV9E'
+      //var vid = '3OtGlm15_iA';//動画①
       //var vid = 'ZikTU_VnFs4';//動画②
-      var vid = 'whO8OkNZV9E';
       var para = getUrlVars();
       if (para["v"])  vid = para["v"];
       if (para["autoplay"]) autoplay= para["autoplay"];
       if (para["off"]) {
         offset = para["off"];
       }
-      if (para["ss"]) {
+      /*if (para["ss"]) {
         LOWRATE = para["ss"];
       }
       if (para["ms"]) {
         HIGHRATE = para["ms"];
       }
+*/
       if (para["showctrl"]) {
         showControl = para["showctrl"];
       }
       setControl();
       setPerformance();
 
-      document.getElementById('ss').addEventListener('change', function () {
+      /*document.getElementById('ss').addEventListener('change', function () {
         var newSs = document.getElementById('ss').value;
         document.getElementById('ss_value').value  = newSs;
         LOWRATE = newSs;
@@ -59,6 +59,7 @@
         first = true;
         setPerformance();
       })
+      */
       /*document.getElementById('offset').addEventListener('change', function () {
         var newOff = document.getElementById('offset').value;
         document.getElementById('offset_value').value  = newOff;
@@ -127,10 +128,11 @@
       //document.getElementById('offset_value').value  = offset;//offset
       document.getElementById('vs').value  = VSRATE;//追加
       document.getElementById('vs_value').value  = VSRATE;//追加
-      document.getElementById('ss').value  = LOWRATE;
+      /*document.getElementById('ss').value  = LOWRATE;
       document.getElementById('ss_value').value  = LOWRATE;
       document.getElementById('ms').value  = HIGHRATE;
       document.getElementById('ms_value').value  = HIGHRATE;
+      */
       setControlVisible();
     }
     function setControlVisible(){
@@ -456,7 +458,8 @@
               flag=0;
               startTime = new Date();
             console.log(flag);
-          player.playVideo();}//
+          //player.playVideo();
+           }//
             u.onend = function(event)
             {
              //alert('Finished in ' + event.elapsedTime + ' seconds.');
@@ -470,7 +473,7 @@
             player.setVolume(10);//読み上げ終了時点
             speechSynthesis.speak(u);//speachする
             console.log("aaaa "+flag);
-            if(flag==0)player.pauseVideo();//??????????????一時停止
+            if(flag==0);//player.pauseVideo();//??????????????一時停止
           //  else player.playVideo();/////???????????再開
 
         }
