@@ -485,11 +485,11 @@ var vid = 'whO8OkNZV9E'
       if (st){
         player.setPlaybackRate(LOWRATE);
         console.log("in sub");
-        document.getElementById("ff").checked = false;
+        //document.getElementById("ff").checked = false;
       }else{
         player.setPlaybackRate(HIGHRATE);
         console.log("out sub");
-        document.getElementById("ff").checked = true;
+        //document.getElementById("ff").checked = true;
       }
 
     }
@@ -506,7 +506,7 @@ var vid = 'whO8OkNZV9E'
           var msg = "[Reduced " + perc + "% (" +
           formatDate(newDuration[3], 'hh:mm:ss')
           +  ")]";
-          document.getElementById("performance").innerHTML = msg;
+          //document.getElementById("performance").innerHTML = msg;
           // "[Reduced into " +
           //   //newDuration + "/" + dur + " :" +
           //   perc + "% (Earned " + earned +" sec.)]";
