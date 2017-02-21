@@ -19,7 +19,15 @@
     var flag =0;
     function onYouTubeIframeAPIReady() {
       //var vid = 'd4Mu3CxaP-4';
+<<<<<<< master
       var vid = 'oyOJotQUfVs';//'wJddRdcr3BE';//'7Qgif5_6_Gg';
+=======
+      //var vid = 'oyOJotQUfVs';//'wJddRdcr3BE';//'7Qgif5_6_Gg';
+　　　　////////var vid = 'whO8OkNZV9E'
+var vid = 'HBG7YmF8_3k'
+      //var vid = '3OtGlm15_iA';//動画①
+      //var vid = 'ZikTU_VnFs4';//動画②
+>>>>>>> local
       var para = getUrlVars();
       if (para["v"])  vid = para["v"];
       if (para["autoplay"]) autoplay= para["autoplay"];
@@ -419,7 +427,12 @@
               flag=0;
               startTime = new Date();
             console.log(flag);
+<<<<<<< master
           player.playVideo();}//
+=======
+          　player.playVideo();
+           }//
+>>>>>>> local
             u.onend = function(event)
             {
              //alert('Finished in ' + event.elapsedTime + ' seconds.');*/
@@ -433,9 +446,15 @@
             player.setVolume(10);//読み上げ終了時点
             speechSynthesis.speak(u);//speachする
             console.log("aaaa "+flag);
+<<<<<<< master
             if(flag==0)player.pauseVideo();//??????????????一時停止
           //  else player.playVideo();/////???????????再開
 */
+=======
+           if(flag==0);player.pauseVideo(); //一時停止
+          　//else player.playVideo();/////???????????再開
+
+>>>>>>> local
         }
       }
 
@@ -449,7 +468,11 @@
       }else{
         player.setPlaybackRate(HIGHRATE);
         console.log("out sub");
+<<<<<<< master
         document.getElementById("ff").checked = true;
+=======
+        //document.getElementById("ff").checked = true; とりあえず閉じる
+>>>>>>> local
       }
 
     }

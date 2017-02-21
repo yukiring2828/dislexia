@@ -34,7 +34,7 @@ function parseSrt(srt) {
   do{
     if (lines[i] == '')break;
     //lines[i] is a number
-    // console.log(lines[i]);
+     console.log(lines[i]);
     i++;
     //lines[i] is a timespan
     var time = parseTimeSpan(lines[i]);
